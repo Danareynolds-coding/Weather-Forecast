@@ -20,8 +20,8 @@ body{
     border-radius: 10px;
     padding:5px 2px;
     border:3px solid darkblue;
-
   }
+  
 #loadingSpinner {
       display: none;
       border: 8px solid #f3f3f3;
@@ -36,8 +36,13 @@ body{
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-    #weatherContainer {
+    #infoContainer{
       text-align: center;
       margin-top: 20px;
       background-color: aquamarine;
+      border: 2px solid seagreen;
+      border-radius:10px; 
+    }
+    #weatherContainer {
+      color: darkblue;
     }

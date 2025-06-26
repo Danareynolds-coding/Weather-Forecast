@@ -10,11 +10,23 @@
 <body>
   <Div class="container">
     <div class="row">
-      <h1 class="col-8">Weather Information</h1>
+      <h1 class="col-8">Weather Biloxi, MS</h1>
       <button class="col-3" id="fetchWeatherBtn">Get Weather</button>
     </div>
   <div id="loadingSpinner"></div>
-  <div id="weatherContainer"></div> 
+<Div id="infoContainer">
+      <div>
+        <image src="./images/rain.png" id="weather-icon" width="60px">
+      </div>
+    <div class="row" id="weatherContainer">
+      <h2></h2>
+      <p class="date"></p>
+      <p class="currentTemp"></p>
+      <p class="maxTemp"></p>
+      <p class="lowTemp"></p>
+      <p class="weatherconditions"></p>
+    </div>
+  </div> 
 </Div>
   <script src="./js/app.js"></script>
 </body>

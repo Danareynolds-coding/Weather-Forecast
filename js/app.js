@@ -1,15 +1,15 @@
-const findMe = () => {
-const success = (position) => {
-    console.log(position);
-    status.textContent = "success";
-    const { latitude, longitude } = position.coords;
-    ;
-  };
-  const error = () => {
+// const findMe = () => {
+// const success = (position) => {
+//     console.log(position);
+//     status.textContent = "success";
+//     const { latitude, longitude } = position.coords;
+//     ;
+//   };
+//   const error = () => {
     
-  };
-  navigator.geolocation.getCurrentPosition(success, error);
-};
+//   };
+//   navigator.geolocation.getCurrentPosition(success, error);
+// };
 // Search Bar or button
 // 7day forecast   ReadAPI- primary endpoint using coord. and response structure
 //1. dates &days 2.icon 3.tempature high and low  4 weather conditions(e.g.cloudy, rainy)  
@@ -21,17 +21,16 @@ const success = (position) => {
     const weatherContainer = document.getElementById('weatherContainer');
     
     // API key
-    const API_KEY = 'YOUR_OPENWEATHERMAP_API_KEY';
+    const API_KEY = 'User-Agent:(https://github.com/Danareynolds-coding/Weather-Forecast, danareynolds77vj@gmail.com)';
     
     // Function to Fetch Weather Data
     function fetchWeatherWithLoading() {
-      const city = 'Biloxi';
-      const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}&units=metric`;
- 
-      // Show Loading Spinner
+      const coordinates = '30.3954, 88.8870';
+      const url = `https://api.weather.gov/gridpoints/{wfo}/{30.3954},{88.8870}/forecast/?appid=${API_KEY}&unit=metric`;
+      
     loadingSpinner.style.display = 'block';
      
-    weatherContainer.innerHTML = ''; // Clear previous content
+    weatherContainer.innerHTML = ''; 
     
     fetch(url)
         .then(response => {
@@ -46,13 +45,16 @@ const success = (position) => {
              });
         })
         .then(data => {
-          // Hide Loading Spinner
+          
           loadingSpinner.style.display = 'none';
-        // Display Weather Data  
+          const currentDate = new Date();
           weatherContainer.innerHTML = `
             <h2>${data.name}</h2>
-            <p>Temperature: ${data.main.temp} °C</p>
-            <p>Weather: ${data.weather[0].description}</p>
+            <p>${data.Date}</p>
+            <p>Temperature: ${data.main.temp} °C </p>
+            <P>Tempature: ${data.maxtemp}°C </p>
+            <P>Tempature: ${data.lowtemp}°C </p>
+            <p>Weather: ${data.weatherconditions[0].description}</p>
           `;
           console.log('Weather Data:', data);
         })
