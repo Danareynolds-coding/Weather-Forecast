@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding:5%;
   background-image: url(../images/weatherbckgr.jpg);
   background-size: cover;
@@ -17,9 +18,15 @@ body{
   button{
     margin: 20px 2px;
     color:darkblue;
+    background-color:aliceblue;
     border-radius: 10px;
     padding:5px 2px;
     border:3px solid darkblue;
+    cursor:pointer ;
+  }
+  button:hover{
+    color:aliceblue;
+    background-color:darkblue;
   }
   
 #loadingSpinner {
@@ -36,13 +43,35 @@ body{
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-    #infoContainer{
+    #weatherContainer{
       text-align: center;
       margin-top: 20px;
       background-color: aquamarine;
       border: 2px solid seagreen;
       border-radius:10px; 
-    }
-    #weatherContainer {
       color: darkblue;
+    }
+    #date{
+      font-size:20px;
+    }
+    #currentTemp{
+      font-size:60px;
+      margin-top: -30px;
+    }
+    #maxTemp{
+      font-size:20px;
+
+    }
+    #lowTemp{ 
+      font-size:20px;
+    }
+    #weatherconditions{
+    font-size:20px;
+    }
+    #weather-icon{
+      width:200px;
+      height: 200px;
+      margin: 0 auto 10px;
+      margin-bottom: 0;
+      display:none;
     }
