@@ -6,3 +6,5 @@
 //const url = `https://api.weather.gov/gridpoints/{wfo}/{30.3954},{88.8870}/forecast/?appid=${API_KEY}&unit=metric`;
 https://api.weather.gov/gridpoints/{office}/{gridX},{gridY}/forecast
 //<p>Weather: ${data.weatherconditions[0].description}</p>
+<p id="icon">${day.icon}</p>
+          <p>Temerature:>${day.tempature}°${day.temperatureUnit}</p>

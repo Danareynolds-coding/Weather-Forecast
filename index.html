@@ -7,26 +7,16 @@
     <link rel="stylesheet" href="./CSS/style.css">
     <title>Weather Forecast Biloxi</title>
 </head>
-<body>
-  <Div class="container">
-    <div class="row">
+<body class=""Container">
+  <header role="banner" class="row">
       <h1 class="col-8">Weather Biloxi, MS</h1>
       <button class="col-3" id="fetchWeatherBtn">Get Weather</button>
-    </div>
+  </header>
+  <main role="main">
   <div id="loadingSpinner"></div>
-<Div id="weatherContainer">
-      <h2></h2>
-      <div>
-        <image src="./images/rain.png" id="weather-icon">
-      </div>
-      <p id="currentTemp"></p>
-      <p id="date"></p>
-      <p id="maxTemp"></p>
-      <p id="lowTemp"></p>
-      <p id="weatherconditions"></p>
-    </div>
-  </div> 
-</Div>
+  <div id="weather-container">     
+      
+  </main>
   <script src="./js/app.js"></script>
 </body>
 </html>

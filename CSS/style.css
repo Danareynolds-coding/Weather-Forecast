@@ -43,7 +43,7 @@ body{
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
-    #weatherContainer{
+    .weatherContainer{
       text-align: center;
       margin-top: 20px;
       background-color: aquamarine;
@@ -51,26 +51,14 @@ body{
       border-radius:10px; 
       color: darkblue;
     }
-    #date{
-      font-size:20px;
+    h5{
+      background-color: rgba(127, 255, 212, 0.635);
+      padding:10px;
+      border-radius: 4px;
     }
-    #currentTemp{
-      font-size:60px;
-      margin-top: -30px;
-    }
-    #maxTemp{
-      font-size:20px;
-
-    }
-    #lowTemp{ 
-      font-size:20px;
-    }
-    #weatherconditions{
-    font-size:20px;
-    }
-    #weather-icon{
-      width:200px;
-      height: 200px;
+    #icon{
+      width:100px;
+      height: 100px;
       margin: 0 auto 10px;
       margin-bottom: 0;
       display:none;
