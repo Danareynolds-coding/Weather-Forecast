@@ -10,17 +10,20 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  align-items:center;
+  justify-content: center;
+  display:flex;
   }
   h1{
     color:aliceblue;
-    margin: 8px 2px;
+    text-shadow: ;
   }
   button{
     margin: 20px 2px;
     color:darkblue;
     background-color:aliceblue;
     border-radius: 10px;
-    padding:5px 2px;
+    padding:5px 1px;
     border:3px solid darkblue;
     cursor:pointer ;
   }
@@ -29,6 +32,10 @@ body{
     background-color:darkblue;
   }
   
+  .icon{
+    text-align: center;
+    size:fit-content;
+  }
 #loadingSpinner {
       display: none;
       border: 8px solid #f3f3f3;
@@ -44,22 +51,48 @@ body{
       100% { transform: rotate(360deg); }
     }
     .weatherContainer{
-      text-align: center;
+      justify-content: center;
       margin-top: 20px;
       background-color: aquamarine;
       border: 2px solid seagreen;
       border-radius:10px; 
       color: darkblue;
+      text-align: center;
     }
-    h5{
-      background-color: rgba(127, 255, 212, 0.635);
+    
+    h6{
+      background-color: rgba(127, 255, 212, 0.885);
+      padding:20px;
+      border-radius: 5px;
+    }
+    #temperature-box{
+      width:100%;
+      background-color: aliceblue;
+      border-radius: 20px;
       padding:10px;
-      border-radius: 4px;
     }
-    #icon{
-      width:100px;
-      height: 100px;
-      margin: 0 auto 10px;
-      margin-bottom: 0;
-      display:none;
+    h2{
+      width:375px;
+      font-size:large;
+
     }
+    p{  
+      font-weight: 700; 
+      color:red;
+      text-align:center;   
+      font-size:small;
+      border-radius:5px ;
+      padding:0px;
+    };
+   @media(max-width:400px){
+    button{
+      font-size: xx-small;
+    }
+   } 
+   @media(max-width:600px){
+    button{
+      font-size:xsmall;
+    }
+   }
+
+    
