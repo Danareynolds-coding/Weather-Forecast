@@ -30,12 +30,14 @@ body{
   button:hover{
     color:aliceblue;
     background-color:darkblue;
+    padding:0;
   }
   
   .icon{
     text-align: center;
     size:fit-content;
   }
+  /* ***************spinner********** */
 #loadingSpinner {
       display: none;
       border: 8px solid #f3f3f3;
@@ -50,6 +52,7 @@ body{
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+    /* ********************************************* */
     .weatherContainer{
       justify-content: center;
       margin-top: 20px;
@@ -67,16 +70,15 @@ body{
     }
     #temperature-box{
       width:100%;
-      background-color: aliceblue;
       border-radius: 20px;
       padding:10px;
     }
     h2{
       width:375px;
       font-size:large;
-
     }
-    p{  
+    p{ 
+      padding:5px 0;
       font-weight: 700; 
       color:red;
       text-align:center;   
@@ -84,7 +86,21 @@ body{
       border-radius:5px ;
       padding:0px;
     };
-   @media(max-width:400px){
+    /* ***********************loading */
+  .loading-bar-container {
+  width: 200px;
+  height: 20px;
+  border: 1px solid #ccc;
+  overflow: hidden;
+}
+
+.loading-bar {
+  height: 100%;
+  background-color: #4CAF50;
+}
+ 
+    /* ****************************************** */
+  @media(max-width:400px){
     button{
       font-size: xx-small;
     }

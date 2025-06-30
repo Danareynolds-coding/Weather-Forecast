@@ -10,16 +10,25 @@
 <body class=""Container">
   <header role="banner" class="row">
       <h1>Weather Biloxi, MS</h1>
-      <button  class="col-5" id="fetchWeatherBtn">Get Data</button>
-      <button class="col-5" id="tempBtn">High and Low Temps</button>
+      <button id="fetchWeatherBtn" class="col-md-3 col-sm-7" >Get Data</button>
+      <button id="tempBtn" class="col-md-3 col-sm-7" >High and Low Temp</button>
+      <button id="celsiusBtn" class="col-md-3 col-sm-7">Celsius</button>
   </header>
-  <main role="main">
+  <main  class="container" role="main">
   <div id="loadingSpinner"></div>
   <div id="weather-container"></div>
-  <div id="temperature-box"></div>    
+
+  <div class="loading-bar-container">
+  <div class="loading-bar" style="width: 50%;"></div>
+  </div>
+
+</div>
+  <div  id="temperature-box" class="row"></div> 
+  <div id="celsius-box" class="row" ></div> 
       
   </main>
-  <script src="./js/app.js"></script>
   <script src="./js/script.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/temp.js"></script>
 </body>
 </html>

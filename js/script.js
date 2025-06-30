@@ -2,14 +2,32 @@ const latitude = 30;
 const longitude = 88;
 // headers: {'User-Agent': 'https://github.com/Danareynolds-coding/weather-app-using-ai (danareynolds77vj@gmail.com)'
 //                 }
+const progressBar = document.querySelector('.loading-bar');
+
+function updateProgressBar(percentage) {
+  progressBar.style.width = percentage + '%';
+}
+let progress = 0;
+const interval = setInterval(() => {
+  progress += 10;
+  updateProgressBar(progress);
+  if (progress >= 100) {
+    clearInterval(interval);
+  }
+}, 2000);
 
 const tempBtn = document.getElementById('tempBtn');
-tempBtn.addEventListener("click", fetchForecast);
+tempBtn.addEventListener("click", handleclick);
 
-     function fetchForecast() {
+function handleclick() {
+    fetchForecast();
+    updateProgressBar();
+}
+
+ function fetchForecast() {
         const url = `https://api.weather.gov/gridpoints/AKQ/30,88/forecast?units=us`;
-          loadingSpinner.style.display = 'block';
-        fetch(url)
+         
+    fetch(url)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Weather data not available');
@@ -22,8 +40,6 @@ tempBtn.addEventListener("click", fetchForecast);
             });
         })
         .then(data => {
-             loadingSpinner.style.display = 'none'; 
-
             console.log(data);
             const forecastData = data.properties.periods;
             displayForecast(forecastData);
@@ -51,6 +67,10 @@ tempBtn.addEventListener("click", fetchForecast);
         for (const date in dailyForecast) {
             const dayData = dailyForecast[date];
             const dayElement = document.createElement("div");
+            dayElement.style.backgroundColor = 'aliceblue';
+            dayElement.style.borderRadius = '10px';
+            dayElement.style.margin = '10px';
+
             dayElement.innerHTML = `
                 <h2 class="col-12">${date}</h2>
                 <p>Min Temperature: ${dayData.minTemp}°F</p>
